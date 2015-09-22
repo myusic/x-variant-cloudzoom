@@ -1,14 +1,19 @@
 Installation files:
-1. Generate a backup of your x-cart. 
-2. skin/common_files/modules/Detailed_Product_Images/cloudzoom_image.tpl
-a. comment out the entire div with the id="variantImageBox"
-b. add this to the detailed images thumbnail anchor tag onclick: detailed_images("{$i.alt|escape}"); 
-3. skin/[your theme or common_files]/modules/Product_Options/customer_options.tpl
-a. add this to the select onchange: clicked_option(); and {if $v.class eq 'Color'}class="color"{/if}
-4. skin/[your theme or common_files]/js/your_js_file.js
-a. add this to your javascript file: 
 
-/*********************** Detailed Images Customization **********************/
+1. Generate a backup of your x-cart home directory. 
+
+2. skin/common_files/modules/Detailed_Product_Images/cloudzoom_image.tpl
+
+    a. comment out the entire div with the id="variantImageBox"
+    b. add this to the detailed images thumbnail anchor tag onclick: detailed_images("{$i.alt|escape}"); 
+3. skin/[your theme or common_files]/modules/Product_Options/customer_options.tpl
+
+    a. add this to the select onchange: clicked_option(); and {if $v.class eq 'Color'}class="color"{/if}
+
+4. skin/[your theme or common_files]/js/your_js_file.js
+    a. add this to your javascript file: 
+
+    /*********************** Detailed Images Customization **********************/
 
 	function clicked_option() {
 		var color_option = $("select.color").find('option:selected').text();
@@ -22,11 +27,11 @@ a. add this to your javascript file:
 		$('.dpimages-icons-box a img[title*='+color+']').parent('a').click();
 	}
 
-	/*************************************************************************/
+	/************************************************************************/
 
 	function detailed_images(color) {
 		$('option:contains('+color+')').attr('selected', 'selected');
 	}
 
-    /**************************************************************************/
+    /****************************************************************************/
  
