@@ -14,4 +14,5 @@ This module assumes:
 4. There is an image for each variant value
 5. Product option created is called "Color" (this can be modified as noted)
 6. You have already set up your own custom js file or are using the appropriate custom js file provided in your theme
+7. Globally your products will have a color option. If there is none, the module does not work. This does not aversely affect any other product option variant type or functionality.
 

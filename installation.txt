@@ -35,3 +35,10 @@ Installation files:
 
     /****************************************************************************/
  
+5. Modification (optional)
+	a. If color is not the main factor for the differences in your product options, use a single word or dashed name to replace all instances of "Color" in the installation.
+	  example: 
+	      Product Option name: Shape
+		  Go to instruction #3 and change the $v.class eq 'Color' to $v.class eq 'Shape'; change class="color" to class="shape".
+		  Go to the js file and change all instances of the word color to shape.
+		  
